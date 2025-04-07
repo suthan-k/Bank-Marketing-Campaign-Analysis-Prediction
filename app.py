@@ -426,8 +426,7 @@ elif option == "Predictions":
         st.subheader("Prediction")
         output = np.array(["No", "Yes"])
         result = output[prediction[0]]
-        st.info(result)
         if result == "Yes":
-            st.write("The Client is likely to open a term deposit.")
+            st.success("The Client is likely to open a term deposit")
         else:
-            st.write("The Client is unlikely to open a term deposit.")
+            st.error("The Client is unlikely to open a term deposit")
