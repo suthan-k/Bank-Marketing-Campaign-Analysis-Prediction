@@ -107,7 +107,7 @@ option = st.sidebar.selectbox("Choose an option", ["EDA", "Predictions"])
 
 if option == "EDA":
     # Display an image
-    img = Image.open("pictures/eda.jpg")
+    img = Image.open("images/eda.jpg")
     st.image(img, width=700)
 
     # Title for EDA section
@@ -236,7 +236,7 @@ if option == "EDA":
 
 elif option == "Predictions":
     # Display an image
-    img = Image.open("pictures/prediction.jpg")
+    img = Image.open("images/prediction.jpg")
     st.image(img, width=700)
 
     # Title for Predictions section
