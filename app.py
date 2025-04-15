@@ -13,7 +13,7 @@ from PIL import Image
 
 # Check if model exists; if not, download it from GDrive
 if not os.path.exists("models/rf.pkl"):
-    url = "https://drive.google.com/uc?id=1AKeLHJAot6oMCcZkRoqQIz-nPaUlIgiU"
+    url = "https://drive.google.com/uc?id=1AKeLHJAot6oMCcZkRoqQIz-nPaUlIgiU&confirm=t"
     gdown.download(url, "models/rf.pkl", quiet=False)
 
 # Load saved models
