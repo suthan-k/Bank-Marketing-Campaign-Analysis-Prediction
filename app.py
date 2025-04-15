@@ -5,23 +5,16 @@ import numpy as np
 import pickle
 import seaborn as sns
 import matplotlib.pyplot as plt
-import gdown
-import os
 from PIL import Image
 
 #### -------------------------------------------------------------------------- ####
-
-# Check if model exists; if not, download it from GDrive
-if not os.path.exists("models/rf.pkl"):
-    url = "https://drive.google.com/uc?id=1AKeLHJAot6oMCcZkRoqQIz-nPaUlIgiU&confirm=t"
-    gdown.download(url, "models/rf.pkl", quiet=False)
 
 # Load saved models
 with open("models/logistics.pkl", "rb") as file:
     logistic_model = pickle.load(file)
 
-with open("models/rf.pkl", "rb") as file:
-    random_forest_model = pickle.load(file)
+# with open("models/rf.pkl", "rb") as file:
+#     random_forest_model = pickle.load(file)
 
 with open("models/xgb.pkl", "rb") as file:
     xgboost_model = pickle.load(file)
