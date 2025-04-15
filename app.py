@@ -5,10 +5,14 @@ import numpy as np
 import pickle
 import seaborn as sns
 import matplotlib.pyplot as plt
+import gdown
+import os
 from PIL import Image
 
 #### -------------------------------------------------------------------------- ####
-
+# Getting the saved Random Forest Model from my Gdrive, sice the file size is big #
+if not os.path.exists("models/rf.pkl"):
+    gdown.download("https://drive.google.com/file/d/1AKeLHJAot6oMCcZkRoqQIz-nPaUlIgiU/view?usp=drive_link", "models/rf.pkl", quiet=False)
 
 # Load saved models
 with open("models/logistics.pkl", "rb") as file:
