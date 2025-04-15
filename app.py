@@ -10,9 +10,11 @@ import os
 from PIL import Image
 
 #### -------------------------------------------------------------------------- ####
-# Getting the saved Random Forest Model from my Gdrive, sice the file size is big #
+
+# Check if model exists; if not, download it from GDrive
 if not os.path.exists("models/rf.pkl"):
-    gdown.download("https://drive.google.com/file/d/1AKeLHJAot6oMCcZkRoqQIz-nPaUlIgiU/view?usp=drive_link", "models/rf.pkl", quiet=False)
+    url = "https://drive.google.com/uc?id=1AKeLHJAot6oMCcZkRoqQIz-nPaUlIgiU"
+    gdown.download(url, "models/rf.pkl", quiet=False)
 
 # Load saved models
 with open("models/logistics.pkl", "rb") as file:
